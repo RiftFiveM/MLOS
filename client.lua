@@ -152,23 +152,6 @@ Citizen.CreateThread(function()
 	end
 end)
 
-
-	 -- House ipls
-	-- function RequestHouseIpls()
-		-- Trapstar
-	--	RequestIpl("ex_dt1_11_office_01a")
-	--	RequestIpl("ex_dt1_11_office_01b")
-	--	RequestIpl("ex_dt1_11_office_01c")
-	--	RequestIpl("ex_dt1_11_office_02a")
-	--	RequestIpl("ex_dt1_11_office_02b")
-	--	RequestIpl("ex_dt1_11_office_02c")
-	--	RequestIpl("ex_dt1_11_office_03a")
---		RequestIpl("ex_dt1_11_office_03b")
---		RequestIpl("ex_dt1_11_office_03c")
-
-	--end
-
-
 CreateThread(function()
 	--?Reduces waves in far ocean.
 	SetDeepOceanScaler(0.0)
@@ -202,27 +185,7 @@ CreateThread(function()
 		RefreshInterior(interiorID)
 	end
 
-		--?Paleto Base/Garage (the old HS one)
-		RequestIpl("paleto_garage_milo_")
-		local interiorID = GetInteriorAtCoords(79.208, 6525.550, 30.227)
-		if IsValidInterior(interiorID) then
-			EnableInteriorProp(interiorID, "walls_02")
-			SetInteriorPropColor(interiorID, "walls_02", 8)
-			EnableInteriorProp(interiorID, "Furnishings_02")
-			SetInteriorPropColor(interiorID, "Furnishings_02", 8)
-			EnableInteriorProp(interiorID, "decorative_02")
-			EnableInteriorProp(interiorID, "mural_03")
-			EnableInteriorProp(interiorID, "lower_walls_default")
-			SetInteriorPropColor(interiorID, "lower_walls_default", 8)
-			EnableInteriorProp(interiorID, "mod_booth")
-			EnableInteriorProp(interiorID, "gun_locker")
-			EnableInteriorProp(interiorID, "cash_small")
-			EnableInteriorProp(interiorID, "id_small")
-			EnableInteriorProp(interiorID, "weed_small")
-			RefreshInterior(interiorID)
-		end
-
-	--Casino Heist -- houses
+	--Casino Heist
 	RequestIpl("ch_int_placement_ch_interior_0_dlc_casino_heist_milo_")
 	RequestIpl("ch_int_placement_ch_interior_1_dlc_arcade_milo_")
 	RequestIpl("ch_int_placement_ch_interior_2_dlc_plan_milo_")
@@ -242,6 +205,27 @@ CreateThread(function()
 	EnableInteriorProp(interiorid, "set_vault_wall_damagedxd") -- Vault wall damaged
 	-- always refresh the interior or they won't appear
 	RefreshInterior(interiorid)
+
+
+	--?Paleto Base/Garage (the old HS one)
+	RequestIpl("paleto_garage_milo_")
+	local interiorID = GetInteriorAtCoords(79.208, 6525.550, 30.227)
+	if IsValidInterior(interiorID) then
+		EnableInteriorProp(interiorID, "walls_02")
+		SetInteriorPropColor(interiorID, "walls_02", 8)
+		EnableInteriorProp(interiorID, "Furnishings_02")
+		SetInteriorPropColor(interiorID, "Furnishings_02", 8)
+		EnableInteriorProp(interiorID, "decorative_02")
+		EnableInteriorProp(interiorID, "mural_03")
+		EnableInteriorProp(interiorID, "lower_walls_default")
+		SetInteriorPropColor(interiorID, "lower_walls_default", 8)
+		EnableInteriorProp(interiorID, "mod_booth")
+		EnableInteriorProp(interiorID, "gun_locker")
+		EnableInteriorProp(interiorID, "cash_small")
+		EnableInteriorProp(interiorID, "id_small")
+		EnableInteriorProp(interiorID, "weed_small")
+		RefreshInterior(interiorID)
+	end
 
 	--?Galaxy Nightclub
 	local int_id = GetInteriorAtCoords(345.4899597168,294.95315551758,98.191421508789)

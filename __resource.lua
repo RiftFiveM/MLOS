@@ -3,11 +3,11 @@ this_is_a_map "yes"
 
 client_scripts {
 	"client.lua",
-    "cl_paleto.lua"
 }
 
 files {
-	"stream/**/*.ytyp",
+    "stream/MissionRow/**/*.ytyp",
+    "CMGMLOs_cache_y.dat"
 }
 
 data_file 'DLC_ITYP_REQUEST' 'stream/**/*.ytyp'
